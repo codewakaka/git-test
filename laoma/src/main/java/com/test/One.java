@@ -58,6 +58,9 @@ public class One {
 
     public void test(){
         System.out.println(11111);
+
+
+        System.out.println("11111111111111111");
     }
 
 }
