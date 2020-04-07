@@ -33,6 +33,11 @@ public class Student {
         this.name = name;
         this.score = score;
     }
+    public Student(String name) {
+        this.name = name;
+    }
+    public Student() {
+    }
 
     @Override
     public String toString() {
