@@ -1,0 +1,10 @@
+<beans  default-autowire="byType">
+
+    <bean id = "dao1" class = "com.spring.dao.UserDaoImpl1">
+
+    </bean>
+    <bean id = "service" class = "com.spring.service.UserServiceImpl">
+
+    </bean>
+
+</beans>
