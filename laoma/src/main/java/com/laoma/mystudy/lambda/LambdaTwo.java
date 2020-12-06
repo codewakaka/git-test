@@ -2,6 +2,7 @@ package com.laoma.mystudy.lambda;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -21,8 +22,29 @@ public class LambdaTwo {
             new Employee("田七", 52, 5555.99),
             new Employee("吴八", 11, 4444.99)
     );
-
+    List<Employee> employee2 = Arrays.asList(
+            new Employee("张五", 12, 9999.99),
+            new Employee("李四", 42, 4444.99),
+            new Employee("赵六", 32, 6666.99),
+            new Employee("吴九", 11, 4444.99)
+    );
     //对对象进行排序，先排age再排名字
+
+    @Test
+    public  void test8(){
+        List<Employee> all = new ArrayList<>();
+        all.addAll(employees);
+        for (Employee e:employee2) {
+            List<Employee> collect = all.stream().filter(t -> t.getName().equals(e.getName())).collect(Collectors.toList());
+            if(collect.size() <= 0){
+                all.add(e);
+                continue;
+            }
+            collect.forEach(t->t.setSalary(10000));
+        }
+        System.out.println(all.toString());
+    }
+
 
     @Test
     public void test1() {
