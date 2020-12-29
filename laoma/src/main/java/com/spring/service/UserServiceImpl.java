@@ -1,11 +1,13 @@
 package com.spring.service;
 
+import com.spring.ann.Myspring;
 import com.spring.dao.UserDao;
 
 /**
  * @author xgh
  * @date ：Created on 2020/12/6
  */
+@Myspring("myspring")
 public class UserServiceImpl implements  UserService{
 
     UserDao dao;
