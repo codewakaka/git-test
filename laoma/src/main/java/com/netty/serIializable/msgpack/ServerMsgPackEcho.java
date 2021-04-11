@@ -19,7 +19,7 @@ import java.net.InetSocketAddress;
  **/
 public class ServerMsgPackEcho {
 
-    public  static final int PORT = 9995;
+    public  static final int PORT = 10995;
 
     public static void main(String[] args) throws Exception {
         ServerMsgPackEcho serverMsgPackEcho = new ServerMsgPackEcho();

@@ -1,5 +1,6 @@
 package com.netty.serIializable.msgpack;
 
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
@@ -19,10 +20,10 @@ public class MsgPackServerHandler extends ChannelInboundHandlerAdapter {
         //将上一个handler生成的数据进行强制转型
         User user = (User) msg;
         System.out.println("server accept["+user+"]and the count is:"+atomicInteger.incrementAndGet());
-        //服务器应答
-        String resp ="I process user :"+ user.getUsername() +System.getProperty("line.separator");
-        ctx.writeAndFlush(resp);
-        //将消息传到下一个channel
+        //服务器的应答
+        String resp = "I process user :"+user.getUserName()
+                + System.getProperty("line.separator");
+        ctx.writeAndFlush(Unpooled.copiedBuffer(resp.getBytes()));
         ctx.fireChannelRead(user);
     }
 

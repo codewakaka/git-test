@@ -52,7 +52,7 @@ public class MsgPackClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
         for (int i=0; i< sendNum;i++){
             user = new User();
             user.setAge(i);
-            user.setUsername("ABBSC-->"+i);
+            user.setUserName("ABBSC-->"+i);
             user.setId("NO"+i );
             user.setUserContact(new UserContact("12321"+i,"123"));
             users[i] = user;
