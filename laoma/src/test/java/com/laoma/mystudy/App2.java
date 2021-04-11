@@ -15,15 +15,15 @@ public class App2 {
         System.out.println("after a:= "+a+" b:="+b);
     }
 
-    private static void swap(int i1, Integer i2) throws NoSuchFieldException, IllegalAccessException {
+    private static void swap(Integer i1, Integer i2) throws NoSuchFieldException, IllegalAccessException {
 
         System.out.println("after a:= "+i2+" b:="+i1);
-        System.exit(-1);
+       // System.exit(-1);
 
         Field field = Integer.class.getDeclaredField("value");
         field.setAccessible(true);
-        Integer temp = new Integer(i1);
+        Integer tem = new Integer(i1);
         field.set(i1,i2);
-        field.set(i2,temp);
+        field.set(i2, tem);
     }
 }

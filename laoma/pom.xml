@@ -92,6 +92,13 @@
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
         </dependency>
+     <!--   <dependency>
+            <groupId>io.earcam.wrapped</groupId>
+            <artifactId>com.sun.tools.attach</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/tools.jar</systemPath>
+        </dependency>-->
     </dependencies>
 
     <build>
