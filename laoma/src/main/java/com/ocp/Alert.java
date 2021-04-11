@@ -10,7 +10,7 @@ import java.util.List;
  * @date ：Created on 2019/12/26
  */
 public class Alert {
-    private List<AlertHandler> alertHandlers = new ArrayList<>();
+    private final List<AlertHandler> alertHandlers = new ArrayList<>();
 
     public void addAlertHandler(AlertHandler alertHandler) {
         this.alertHandlers.add(alertHandler);

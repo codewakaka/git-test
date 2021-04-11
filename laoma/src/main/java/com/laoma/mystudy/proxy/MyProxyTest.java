@@ -1,10 +1,5 @@
 package com.laoma.mystudy.proxy;
 
-import sun.misc.ProxyGenerator;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.lang.reflect.Proxy;
 
 /**
