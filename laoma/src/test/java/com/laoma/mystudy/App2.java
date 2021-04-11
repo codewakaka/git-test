@@ -16,6 +16,10 @@ public class App2 {
     }
 
     private static void swap(int i1, Integer i2) throws NoSuchFieldException, IllegalAccessException {
+
+        System.out.println("after a:= "+i2+" b:="+i1);
+        System.exit(-1);
+
         Field field = Integer.class.getDeclaredField("value");
         field.setAccessible(true);
         Integer temp = new Integer(i1);
